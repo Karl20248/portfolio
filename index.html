@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Юдин Кирилл Игоревич</title>
     <meta name="description" content="Моё портфолио с информацией об образовании, интересах и навыках">
-    <link rel="stylesheet" href="outlines.css">
+    <link rel="stylesheet" href="css/outlines.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header>
+        <a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
         <nav>
-                <a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
                 <a href="#interests">Интересы</a>
@@ -22,7 +30,7 @@
         <section id="intro" style="display: flex;">
             <div style="flex: 1;">
                 <h1>Кирилл Юдин</h1>
-                <h2>Программист и Системный администратор</h2>
+                <p>Программист и Системный администратор</p>
             </div>
             <div>
                 <img src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
@@ -40,7 +48,7 @@
 
         <section id="skills">
             <h2>Мои навыки</h2>
-            <div>
+            <div class="sort">
                 <p>Сортировать
                 <button>по названию</button>
                 <button>по уровню</button></p>
@@ -73,8 +81,18 @@
 
         <section id="contacts">
             <h2>Мои контакты</h2>
-            <a href="tel:+79151654788">+7 915 165-47-88</a>
-            <a href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a>
+            <ul>
+                <li><a href="tel:+79151654788">+7 915 165-47-88</a></li>
+                <li><a href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a></li>
+            </ul>
+            
+            <ul>
+                <li><a>GitHub</a></li>
+                <li><a>Gitlab</a></li>
+                <li><a>Instagram</a></li>
+                <li><a>Telegram</a></li>
+                <li><a>Вконтакте</a></li>
+            </ul>
         </section>
     </main>
 
