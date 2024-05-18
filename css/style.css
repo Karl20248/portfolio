@@ -1,1 +1,146 @@
- 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-color: #212121;
+    --green: #09A494;
+    --bg-color: #FFFFFF;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+}
+
+footer {
+    color: var(--bg-color);
+    background-color: var(--txt-color);
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+  }
+
+h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+footer {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.subtitle {
+font-family: "Open Sans", sans-serif;
+font-size: 38px;
+font-weight: 400;
+line-height: 1.2;
+text-align: left;
+color: var(--green);
+background-color: var(--bg-color);
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+button {
+    color: var(--green);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    width: 148px;
+    height: 36px;
+    padding: 6px 10px 10px 10px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--green);
+    font-size: 19px;
+    text-transform: lowercase;
+    opacity: 0px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--green);
+    color: var(--bg-color);
+    opacity: 1;
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.social li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

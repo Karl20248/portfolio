@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио Юдин Кирилл Игоревич</title>
     <meta name="description" content="Моё портфолио с информацией об образовании, интересах и навыках">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalsize.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,84 +20,88 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <header>
-        <a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
-        <nav>
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#interests">Интересы</a>
-                <a href="#contacts">Контакты</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="main-header">
+            <a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
+            <nav>
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#interests">Интересы</a>
+                    <a href="#contacts">Контакты</a>
+            </nav>
+        </header>
 
-    <main>
-        <section id="intro">
-                <h1>Кирилл Юдин</h1>
-                <p>Программист и Системный администратор</p>
-                <img src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
-        </section>
+        <main>
+            <section id="intro" class="intro">
+                    <h1>Кирилл Юдин</h1>
+                    <p class="subtitle">Программист и Системный администратор</p>
+                    <img src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
+            </section>
 
-        <section id="about">
-            <h2>Пара слов обо мне</h2>
-            <p>Привет ✌️</p>
-            <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
-            по направлению «Информатика и вычисли­тельная техника».</p>
-            <p>В прошлом году защитил диплом бакалавра на тему «Разработка программного модуля для 3D-отображения области падения отделяющихся частей ракеты». Работа была высоко оценена комиссией.</p>
-            <p>В настоящее время работаю на должности инженера в Центре управления полетами.</p> 
-        </section>
+            <section id="about" class="about">
+                <h2>Пара слов обо мне</h2>
+                <p>Привет ✌️</p>
+                <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
+                по направлению «Информатика и вычисли­тельная техника».</p>
+                <p>В прошлом году защитил диплом бакалавра на тему «Разработка программного модуля для 3D-отображения области падения отделяющихся частей ракеты». Работа была высоко оценена комиссией.</p>
+                <p>В настоящее время работаю на должности инженера в Центре управления полетами.</p> 
+            </section>
 
-        <section id="skills">
-            <h2>Мои навыки</h2>
-            <div class="sort">
-                <p>Сортировать</p>
-                <button>по названию</button>
-                <button>по уровню</button>
-            </div>
-            <dl>
-                <dt>html</dt>
-                <dd>
-                    <div style="width: 40%;">80%</div>
-                </dd>
-                <dt>css</dt>
-                <dd>
-                    <div style="width: 40%;">80%</div>
-                </dd>
-                <dt>python</dt>
-                <dd>
-                    <div style="width: 40%;">60%</div>
-                </dd>
-                <dt>c++</dt>
-                <dd>
-                    <div style="width: 40%;">70%</div>
-                </dd>
-            </dl>
-        </section>
-        
-        <section id="interests">
-            <h2>Мои интересы</h2>
-            <p>Наибольший интерес для меня в данный момент представляет программирование на языках высокого уровня и работа с железом (в т.ч. сборка ПК).</p>
-            <p>Помимо учёбы и работы я также люблю активный отдых, просмотр кино и чтение зарубежной литературы.</p>
-        </section>
-
-        <section id="contacts">
-            <h2>Мои контакты</h2>
-            <ul>
-                <li><a href="tel:+79151654788">+7 915 165-47-88</a></li>
-                <li><a href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a></li>
-            </ul>
+            <section id="skills" class="skills">
+                <h2>Мои навыки</h2>
+                <div class="sort">
+                    <p>Сортировать</p>
+                    <button>по названию</button>
+                    <button>по уровню</button>
+                </div>
+                <dl>
+                    <dt>html</dt>
+                    <dd>
+                        <div style="width: 40%;">80%</div>
+                    </dd>
+                    <dt>css</dt>
+                    <dd>
+                        <div style="width: 40%;">80%</div>
+                    </dd>
+                    <dt>python</dt>
+                    <dd>
+                        <div style="width: 40%;">60%</div>
+                    </dd>
+                    <dt>c++</dt>
+                    <dd>
+                        <div style="width: 40%;">70%</div>
+                    </dd>
+                </dl>
+            </section>
             
-            <ul>
-                <li><a>GitHub</a></li>
-                <li><a>Gitlab</a></li>
-                <li><a>Instagram</a></li>
-                <li><a>Telegram</a></li>
-                <li><a>Вконтакте</a></li>
-            </ul>
-        </section>
-    </main>
+            <section id="interests" class="interests">
+                <h2>Мои интересы</h2>
+                <p>Наибольший интерес для меня в данный момент представляет программирование на языках высокого уровня и работа с железом (в т.ч. сборка ПК).</p>
+                <p>Помимо учёбы и работы я также люблю активный отдых, просмотр кино и чтение зарубежной литературы.</p>
+            </section>
 
-    <footer>
-        © 2024 Кирилл Юдин
+            <section id="contacts" class="contacts">
+                <h2>Мои контакты</h2>
+                <ul>
+                    <li><a href="tel:+79151654788">+7 915 165-47-88</a></li>
+                    <li><a href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a></li>
+                </ul>
+                
+                <ul class="social">
+                    <li><a class="social-link"><span class="social-text">GitHub</span></a></li>
+                    <li><a class="social-link"><span class="social-text">Gitlab</span></a></li>
+                    <li><a class="social-link"><span class="social-text">Instagram</span></a></li>
+                    <li><a class="social-link"><span class="social-text">Telegram</span></a></li>
+                    <li><a class="social-link"><span class="social-text">Вконтакте</span></a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+        <p>© 2024 Кирилл Юдин</p>
+        </div>
     </footer>
 
 </body>
