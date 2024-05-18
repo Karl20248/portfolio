@@ -181,6 +181,10 @@ button:hover {
     color: black;
 }
 
+.contact-link:hover {
+    color: var(--green);
+}
+
 .contact-link img {
     vertical-align: middle;
     margin-right: 10px;
