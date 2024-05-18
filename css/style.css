@@ -177,23 +177,23 @@ button:hover {
 }
 
 .contact-link {
-    text-decoration: none; /* Убирает подчеркивание */
-    color: black; /* Изменяет цвет текста на черный */
+    text-decoration: none;
+    color: black;
 }
 
 .contact-link img {
-    vertical-align: middle; /* Это обеспечивает корректное вертикальное выравнивание изображения с текстом */
-    margin-right: 10px; /* Добавляет отступ справа от иконки */
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .contact-link_phone {
-    margin-right: 42px; /* Добавляем отступ снизу */
+    margin-right: 42px;
 }
 
 .user-photo {
-    border-radius: 50%; /* Делает изображение круглым */
-    width: 400px; /* Устанавливает ширину */
-    height: 400px; /* Устанавливает высоту */
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
 }
 
 
