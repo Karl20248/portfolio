@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalsize.css">
+    <link rel="stylesheet" href="css/nomalise.css">
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package_v0.16/apple-touch-icon.png">
@@ -35,7 +35,7 @@
             <section id="intro" class="intro">
                     <h1>Кирилл Юдин</h1>
                     <p class="subtitle">Программист и Системный администратор</p>
-                    <img src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
+                    <img class="user-photo" src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
             </section>
 
             <section id="about" class="about">
@@ -54,22 +54,22 @@
                     <button>по названию</button>
                     <button>по уровню</button>
                 </div>
-                <dl>
-                    <dt>html</dt>
-                    <dd>
-                        <div style="width: 40%;">80%</div>
+                <dl class="skill-list">
+                    <dt class="skill-item skill-item_html">html</dt>
+                    <dd class="skill-level">
+                        <div style="width: 80%;">80%</div>
                     </dd>
-                    <dt>css</dt>
-                    <dd>
-                        <div style="width: 40%;">80%</div>
+                    <dt class="skill-item skill-item_css">css</dt>
+                    <dd class="skill-level">
+                        <div style="width: 80%;">80%</div>
                     </dd>
-                    <dt>python</dt>
-                    <dd>
-                        <div style="width: 40%;">60%</div>
+                    <dt class="skill-item skill-item_python">python</dt>
+                    <dd class="skill-level">
+                        <div style="width: 60%;">60%</div>
                     </dd>
-                    <dt>c++</dt>
-                    <dd>
-                        <div style="width: 40%;">70%</div>
+                    <dt class="skill-item skill-item_cpp">c++</dt>
+                    <dd class="skill-level">
+                        <div style="width: 70%;">70%</div>
                     </dd>
                 </dl>
             </section>
@@ -82,17 +82,17 @@
 
             <section id="contacts" class="contacts">
                 <h2>Мои контакты</h2>
-                <ul>
-                    <li><a href="tel:+79151654788">+7 915 165-47-88</a></li>
-                    <li><a href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a></li>
+                <ul class="contact">
+                    <li><a class="contact-link contact-link_phone" href="tel:+79151654788"><img src="img/icon-phone.svg">+7 915 165-47-88</a></li>
+                    <li><a class="contact-link contact-link_mail" href="mailto:kyudin2001@mail.ru"><img src="img/icon-email.svg">kyudin2001@mail.ru</a></li>
                 </ul>
                 
                 <ul class="social">
-                    <li><a class="social-link"><span class="social-text">GitHub</span></a></li>
-                    <li><a class="social-link"><span class="social-text">Gitlab</span></a></li>
-                    <li><a class="social-link"><span class="social-text">Instagram</span></a></li>
-                    <li><a class="social-link"><span class="social-text">Telegram</span></a></li>
-                    <li><a class="social-link"><span class="social-text">Вконтакте</span></a></li>
+                    <li><a class="social-link social-link_github" href="https://github.com"><img src="img/social-github.svg" alt="GitHub"><span class="social-text visually-hidden">GitHub</span></a></li>
+                    <li><a class="social-link social-link_gitlab" href="https://gitlab.com"><img src="img/social-gitlab.svg" alt="Gitlab"><span class="social-text visually-hidden">Gitlab</span></a></li>
+                    <li><a class="social-link social-link_instagram" href="https://instagram.com"><img src="img/social-instagram.svg" alt="Instagram"><span class="social-text visually-hidden">Instagram</span></a></li>
+                    <li><a class="social-link social-link_telegram" href="https://telegram.org"><img src="img/social-telegram.svg" alt="Telegram"><span class="social-text visually-hidden">Telegram</span></a></li>
+                    <li><a class="social-link social-link_vk" href="https://vk.com"><img src="img/social-vk.svg" alt="Вконтакте"><span class="social-text visually-hidden">Вконтакте</span></a></li>
                 </ul>
             </section>
         </main>

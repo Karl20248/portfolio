@@ -12,11 +12,11 @@
 
 body {
     font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--txt-color);
-  background-color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
 }
 
 footer {
@@ -25,12 +25,12 @@ footer {
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--txt-color);
-  background-color: var(--bg-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
 }
 
 h2 {
@@ -41,7 +41,7 @@ h2 {
     text-align: left;
     color: var(--txt-color);
     background-color: var(--bg-color);
-  }
+}
 
 h3 {
     font-family: "Open Sans", sans-serif;
@@ -54,10 +54,10 @@ h3 {
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 38px;
-  font-weight: 400;
-  line-height: 1.2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 a {
@@ -80,14 +80,15 @@ footer {
     font-weight: 400;
     line-height: 1;
 }
+
 .subtitle {
-font-family: "Open Sans", sans-serif;
-font-size: 38px;
-font-weight: 400;
-line-height: 1.2;
-text-align: left;
-color: var(--green);
-background-color: var(--bg-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--green);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -125,7 +126,6 @@ button:hover {
     list-style-type: none;
 }
 
-
 .social li {
     display: inline-block;
     margin: 0;
@@ -143,4 +143,112 @@ button:hover {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center; /* Центрируем контент по горизонтали */
+    align-items: center; /* Центрируем контент по вертикали */
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    margin: 0 20px; /* Верх и низ по 0, слева и справа по 5px */
+    margin-left: -5px;
+    margin-top: 42px;
+}
+
+.social-link:hover {
+    background-color: var(--green);
+}
+
+.contact {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 42px;
+}
+
+.contact li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-link {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: black; /* Изменяет цвет текста на черный */
+}
+
+.contact-link img {
+    vertical-align: middle; /* Это обеспечивает корректное вертикальное выравнивание изображения с текстом */
+    margin-right: 10px; /* Добавляет отступ справа от иконки */
+}
+
+.contact-link_phone {
+    margin-right: 42px; /* Добавляем отступ снизу */
+}
+
+.user-photo {
+    border-radius: 50%; /* Делает изображение круглым */
+    width: 400px; /* Устанавливает ширину */
+    height: 400px; /* Устанавливает высоту */
+}
+
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+.skill-list dt {
+    margin-bottom: 6px;
+    padding: 5px 0 5px 38px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+
+.skill-level {
+    margin: 4px 0 20px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--txt-color);
+    border-radius: 16px;
+}
+
+
+.skill-level div {
+    height: 14px;
+    background-color: var(--green);
+    border-radius: 8px;
+}
+
+
+.skill-item {
+    text-transform: lowercase;
+}
+
+
+.skill-item_html {
+    background-image: url("../img/skill-html.svg");
+}
+
+
+.skill-item_css {
+    background-image: url("../img/skill-css.svg");
+}
+
+
+.skill-item_cpp {
+    background-image: url("../img/skill-c++.svg");
+}
+
+
+.skill-item_python {
+    background-image: url("../img/skill-python.svg");
 }
