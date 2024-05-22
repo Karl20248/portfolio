@@ -145,6 +145,17 @@ button:hover {
     overflow: hidden;
 }
 
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    color: var(--txt-color);
+}
+
+.main-nav a:hover {
+    color:var(--green);
+}
+
 .social-link {
     display: flex;
     justify-content: center; /* Центрируем контент по горизонтали */
@@ -157,10 +168,32 @@ button:hover {
     margin: 0 20px;
     margin-left: -5px;
     margin-top: 42px;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .social-link:hover {
     background-color: var(--green);
+}
+
+.social-link_github {
+    background-image: url("../img/social-github.svg");
+}
+
+.social-link_gitlab {
+    background-image: url("../img/social-gitlab.svg");
+}
+
+.social-link_instagram {
+    background-image: url("../img/social-instagram.svg");
+}
+
+.social-link_telegram {
+    background-image: url("../img/social-telegram.svg");
+}
+
+.social-link_vk {
+    background-image: url("../img/social-vk.svg");
 }
 
 .contact {
@@ -177,8 +210,12 @@ button:hover {
 }
 
 .contact-link {
+    display: block;
+    padding: 5px 40px 40px 42px;
+    background-repeat: no-repeat;
+    background-position: left top;
     text-decoration: none;
-    color: black;
+    color: var(--txt-color);
 }
 
 .contact-link:hover {
@@ -192,6 +229,11 @@ button:hover {
 
 .contact-link_phone {
     margin-right: 42px;
+    background-image: url("../img/icon-phone.svg");
+}
+
+.contact-link_mail {
+    background-image: url("../img/icon-email.svg");
 }
 
 .user-photo {
