@@ -25,26 +25,29 @@ footer {
 }
 
 h1 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 60px;
     font-weight: 700;
     line-height: 1.1;
     color: var(--txt-color);
     background-color: var(--bg-color);
+    text-align: left;
 }
 
 h2 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
     text-align: left;
     color: var(--txt-color);
     background-color: var(--bg-color);
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
@@ -58,37 +61,48 @@ p {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 a {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    text-align: left;
 }
 
 button {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
 }
 
 footer {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
 }
 
 .subtitle {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 38px;
     font-weight: 400;
     line-height: 1.2;
     text-align: left;
     color: var(--green);
     background-color: var(--bg-color);
+}
+
+section {
+    margin-top: 120px;
 }
 
 .container {
@@ -122,6 +136,7 @@ button:hover {
 
 .social {
     margin: 0;
+    margin-bottom: 120px;
     padding: 0;
     list-style-type: none;
 }
@@ -129,6 +144,7 @@ button:hover {
 .social li {
     display: inline-block;
     margin: 0;
+    margin-right: 15px;
     padding: 0;
 }
 
@@ -145,31 +161,15 @@ button:hover {
     overflow: hidden;
 }
 
-.main-nav a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 15px 10px 15px;
-    color: var(--txt-color);
-}
-
-.main-nav a:hover {
-    color:var(--green);
-}
-
 .social-link {
-    display: flex;
-    justify-content: center; /* Центрируем контент по горизонтали */
-    align-items: center; /* Центрируем контент по вертикали */
+    display: block;
     width: 50px;
     height: 50px;
     border: 1px solid var(--green);
     border-radius: 50%;
-    transition: background-color 0.3s ease;
-    margin: 0 20px;
-    margin-left: -5px;
-    margin-top: 42px;
+    padding: 10px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 .social-link:hover {
@@ -197,23 +197,27 @@ button:hover {
 }
 
 .contact {
-    margin: 0;
+    display: inline-flex;
+    margin: 0 auto;
+    margin-bottom: 40px;
     padding: 0;
     list-style-type: none;
-    margin-top: 42px;
+    gap: 40px;
+    white-space: nowrap;
 }
 
 .contact li {
     display: inline-block;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
 .contact-link {
     display: block;
-    padding: 5px 40px 40px 42px;
+    padding: 0px 0px 0px 42px;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-size: 25px;
+    background-position: left;
     text-decoration: none;
     color: var(--txt-color);
 }
@@ -228,12 +232,58 @@ button:hover {
 }
 
 .contact-link_phone {
-    margin-right: 42px;
     background-image: url("../img/icon-phone.svg");
 }
 
 .contact-link_mail {
     background-image: url("../img/icon-email.svg");
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+#intro h1 {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+#intro p {
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    order: 1;
+  }
+
+.main-nav a {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    color: var(--txt-color);
+    align-items: flex-start;
+}
+
+.main-nav a:hover {
+    color:var(--green);
+}
+
+.main-header {
+    display: flex;
+    padding-top: 60px;
+    gap: 40px;
+    align-items: center;
+  }
+
+.main-footer {
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .user-photo {
@@ -242,11 +292,30 @@ button:hover {
     height: 400px;
 }
 
+.skills-header {
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+    gap: 40px;
+}
+
+.skills-button {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0;
+    gap: 20px;
+}
 
 .skill-list {
     margin: 0;
     padding: 0;
     line-height: 1;
+    width: 100%;
 }
 
 
@@ -298,3 +367,7 @@ button:hover {
 .skill-item_python {
     background-image: url("../img/skill-python.svg");
 }
+
+.text-wrapper {
+    max-width: 800px;
+  }
