@@ -15,6 +15,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
+    text-align: left;
     color: var(--txt-color);
     background-color: var(--bg-color);
 }
@@ -60,7 +61,7 @@ p {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.5;
     margin: 0;
     margin-bottom: 15px;
 }
@@ -116,13 +117,9 @@ button {
     color: var(--green);
     background-color: var(--bg-color);
     cursor: pointer;
-    width: 148px;
-    height: 36px;
     padding: 6px 10px 10px 10px;
-    gap: 10px;
     border-radius: 8px;
     border: 1px solid var(--green);
-    font-size: 19px;
     text-transform: lowercase;
     opacity: 0px;
     transition: all 0.3s ease;
@@ -135,16 +132,17 @@ button:hover {
 }
 
 .social {
-    margin: 0;
-    margin-bottom: 120px;
+    display: flex;
+    margin: 0 auto;
     padding: 0;
+    gap: 20px;
     list-style-type: none;
+    white-space: nowrap;
 }
 
 .social li {
     display: inline-block;
     margin: 0;
-    margin-right: 15px;
     padding: 0;
 }
 
@@ -206,6 +204,10 @@ button:hover {
     white-space: nowrap;
 }
 
+.contacts {
+    margin-bottom: 120px;
+}
+
 .contact li {
     display: inline-block;
     margin: 0 auto;
@@ -216,10 +218,11 @@ button:hover {
     display: block;
     padding: 0px 0px 0px 42px;
     background-repeat: no-repeat;
-    background-size: 25px;
     background-position: left;
     text-decoration: none;
     color: var(--txt-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .contact-link:hover {
@@ -239,19 +242,19 @@ button:hover {
     background-image: url("../img/icon-email.svg");
 }
 
-#intro {
+.intro {
     display: flex;
     align-items: center;
     gap: 70px;
     justify-content: space-between;
 }
 
-#intro h1 {
+.intro h1 {
     margin-bottom: 20px;
     margin-top: 0;
 }
 
-#intro p {
+.intro p {
     margin: 0;
 }
 
@@ -266,7 +269,6 @@ button:hover {
     text-decoration: none;
     padding: 10px 15px 10px 15px;
     color: var(--txt-color);
-    align-items: flex-start;
 }
 
 .main-nav a:hover {
@@ -290,6 +292,18 @@ button:hover {
     border-radius: 50%;
     width: 400px;
     height: 400px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 30px;
+}
+
+.skills h2 {
+    margin-bottom:  0;
 }
 
 .skills-header {
