@@ -214,7 +214,7 @@ button:hover {
 
 .contact li {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -615,4 +615,24 @@ button:hover {
         flex-direction: column;
         margin-bottom: 20px;
       }
+
+        .social-link_github {
+        flex-wrap: wrap;
+    }
+    
+        .social-link_gitlab {
+            flex-wrap: wrap;
+    }
+    
+        .social-link_instagram {
+            flex-wrap: wrap;
+    }
+    
+        .social-link_telegram {
+            flex-wrap: wrap;
+    }
+    
+        .social-link_vk {
+            flex-wrap: wrap;
+    }
     }
