@@ -131,6 +131,10 @@ button:hover {
     opacity: 1;
 }
 
+.button-nav {
+    display: none;
+  }
+
 .social {
     display: flex;
     margin: 0 auto;
@@ -386,42 +390,229 @@ button:hover {
     max-width: 800px;
   }
 
-  @media screen and (max-width: 1024px) {   
-	h1 {
-        font-size: 50px;
-    }   
-}
-
-@media screen and (max-width: 650px) {   
-	h1 {
-        font-size: 32px;
-    }   
-}
-
-@media screen and (max-width: 360px) {   
-	/* переопределение свойств */   
-}
-
 @media screen and (max-width: 1024px) {   
-	h2 {
-        font-size: 24px;
-    }   
-}
-
-@media screen and (max-width: 650px) {   
-	h2 {
-        font-size: 20px;
-    }   
-}
-
-@media screen and (max-width: 1024px) {   
-	h3 {
-        font-size: 18px;
-    }   
-}
-
-@media screen and (max-width: 650px) {   
-	h3 {
+    body {
         font-size: 16px;
-    }   
-}
+      }
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-top: 80px;
+      }
+
+      a, button {
+        font-size: 16px;
+      }
+
+      .button-nav {
+        display: none;
+      }
+
+      .contacts {
+        margin-bottom: 80px;
+      }
+
+      .intro {
+        margin-top: 80px;
+      }
+
+      .main-header {
+        padding-top: 60px;
+      }
+
+      .subtitle {
+        font-size: 28px;
+      }
+
+      .user-photo {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media screen and (max-width: 650px) {   
+
+        body {
+          font-size: 14px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+  
+        h2 {
+          margin-bottom: 30px;
+          font-size: 20px;
+        }
+  
+        a,
+        button {
+          font-size: 14px;
+        }
+  
+        .button-nav {
+          display: flex;
+          border: 0;
+          background: none;
+          display: block;
+          width: 30px;
+          height: 30px;
+        }
+  
+        .button_close-nav {
+          background-image: url(../img/close.svg);
+        }
+  
+        .button_open-nav {
+          background-image: url(../img/burger.svg);
+        }
+  
+        .intro {
+          gap: 30px;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          margin-top: 60px;
+        }
+  
+        .intro h1 {
+          margin-bottom: 10px;
+          text-align: center;
+        }
+  
+        section {
+          margin-top: 50px;
+      }
+  
+        .main-header{
+          padding-top: 20px;
+          gap: 20px;
+        }
+  
+        .main-header img {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .main-nav a {
+          margin: 10px;
+        }
+  
+        .main-header,
+        .main-nav {
+          flex-direction: column;
+        }
+  
+        .name {
+          order: 1;
+        }
+  
+        .logo {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+  
+        .subtitle {
+          font-size: 20px;
+          text-align: center;
+        }
+  
+        .user-photo {
+          width: 150px;
+          height: 150px;
+          order: 0;
+        }
+  
+        .contacts {
+          margin-bottom: 60px;
+          margin-top: 80px;
+        }
+  
+        .contact {
+          padding: 8px 0 8px;
+          margin-bottom: 20px;
+        }
+  
+        .contacts h2 {
+          margin-bottom: 30px;
+        }
+  
+        .main-footer {
+          padding: 30px 20px 30px 20px;
+        }
+  
+        .skills {
+          margin-top: 0;
+        }
+  
+        .skills p {
+          margin-bottom: 0;
+        }
+  
+        .skills h2 {
+          margin-top: 40px;
+        }
+  
+        .skills-header {
+          flex-direction: column;
+          gap: 20px;
+        }
+  
+        .skills-button {
+          gap: 10px;
+          width: 100%;
+          flex-direction: column;
+        }
+  
+        .skills-button button {
+          width: 100%;
+          text-align: center;
+        }
+  
+  }
+
+  @media screen and (max-width: 360px) {   
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      .contacts {
+        margin-bottom: 50px;
+      }
+
+      .skills {
+        gap: 20px;
+      }
+
+      .skills-header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .skills-button {
+        gap: 10px;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .skills-button button {
+        width: 100%;
+      }
+
+      .skills p {
+        margin-bottom: 0;
+      }
+
+      .contact {
+        display: inline-flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+    }
