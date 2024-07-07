@@ -80,13 +80,6 @@ button {
     line-height: 1;
 }
 
-footer {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1;
-}
-
 .subtitle {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 38px;
@@ -311,6 +304,7 @@ button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 40px;
     padding: 0;
     gap: 20px;
 }
@@ -556,6 +550,10 @@ button:hover {
         .skills-header {
         display: flex;
         margin-bottom: 30px;
+        }
+
+        .skills h2 {
+          margin-bottom:  0;
         }
 
         .skills-button {
