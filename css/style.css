@@ -552,10 +552,6 @@ button:hover {
         margin-bottom: 30px;
         }
 
-        .skills h2 {
-          margin-bottom:  0;
-        }
-
         .skills-button {
         display: flex;
         gap: 20px;
@@ -591,7 +587,6 @@ button:hover {
 
       .skills-header {
         flex-direction: column;
-        gap: 20px;
       }
 
       .skills-button {
