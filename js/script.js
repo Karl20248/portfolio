@@ -10,22 +10,7 @@ const skills = {
     this.data.forEach(skill => {
       const skillItem = document.createElement('dt');
       skillItem.classList.add('skill-item');
-
-      switch (skill.name) {
-        case 'html':
-          skillItem.style.backgroundImage = 'url("../portfolio/img/skill-html.svg")';
-          break;
-        case 'css':
-          skillItem.style.backgroundImage = 'url("../portfolio/img/skill-css.svg")';
-          break;
-        case 'python':
-          skillItem.style.backgroundImage = 'url("../portfolio/img/skill-python.svg")';
-          break;
-        case 'c++':
-          skillItem.style.backgroundImage = 'url("../portfolio/img/skill-c++.svg")';
-          break;
-      }
-
+      skillItem.style.backgroundImage = `url("../portfolio/img/skill-${skill.name}.svg")`;
       skillItem.textContent = skill.name;
 
       const skillLevel = document.createElement('dd');
