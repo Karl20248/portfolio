@@ -6,10 +6,9 @@ const skills = {
     { name: 'c++', level: 70 }
   ],
 
-  // Добавляем флаги для направления сортировки
   sortByNameAsc: false,
   sortByLevelAsc: false,
-  sortMode: null, // Добавляем новое свойство sortMode
+  sortMode: null,
 
   generateList(parentElement) {
     this.data.forEach(skill => {
@@ -31,7 +30,6 @@ const skills = {
   },
 
   sortList(type) {
-    // Проверяем значение sortMode
     if (this.sortMode === null || this.sortMode !== type) {
       console.log(`отсортировали данные по ${type}`);
     } else {
@@ -39,38 +37,26 @@ const skills = {
     }
 
     if (type === 'name') {
-      this.data.sort(this.compareByName);
-      // Меняем направление сортировки при повторном нажатии на кнопку
+      this.data.sort(this.getComparer((a, b) => a.name < b.name ? -1 : 1));
       this.sortByNameAsc = !this.sortByNameAsc;
       if (!this.sortByNameAsc) {
         this.data.reverse();
       }
     } else if (type === 'level') {
-      this.data.sort(this.compareByLevel);
-      // Меняем направление сортировки при повторном нажатии на кнопку
+      this.data.sort(this.getComparer((a, b) => a.level < b.level ? 1 : -1));
       this.sortByLevelAsc = !this.sortByLevelAsc;
       if (!this.sortByLevelAsc) {
         this.data.reverse();
       }
     }
 
-    // Устанавливаем значение sortMode равным типу сортировки
     this.sortMode = type;
-
     skillList.innerHTML = '';
     this.generateList(skillList);
   },
 
-  compareByName(a, b) {
-    if (a.name < b.name) return -1;
-    if (a.name > b.name) return 1;
-    return 0;
-  },
-
-  compareByLevel(a, b) {
-    if (a.level < b.level) return 1;
-    if (a.level > b.level) return -1;
-    return 0;
+  getComparer(compareFunc) {
+    return (a, b) => compareFunc(a, b);
   }
 };
 
@@ -79,14 +65,7 @@ const sortBtnsBlock = document.querySelector('.skills-button');
 const buttonCloseNav = document.querySelector('.button-nav.button_close-nav');
 const mainNav = document.querySelector('.main-nav');
 
-mainNav.classList.add('main-nav_closed'); // Добавляем класс для скрытия меню
-
-mainNav.addEventListener('click', () => {
-  console.log(mainNav);
-});
-buttonCloseNav.addEventListener('click', () => {
-  console.log(buttonCloseNav);
-});
+mainNav.classList.add('main-nav_closed');
 
 const menu = {
   mainNav: document.querySelector('.main-nav'),
@@ -115,10 +94,7 @@ const menu = {
   }
 };
 
-// Вызов закрытия меню при загрузке скрипта
 menu.close();
-
-// Добавление обработчика события на кнопку
 menu.buttonCloseNav.addEventListener('click', () => {
   menu.toggle();
 });
