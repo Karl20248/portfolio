@@ -543,7 +543,9 @@ button:hover {
           padding: 6px 10px 10px 10px;
           text-align: center;
         }
-  
+        .main-nav_closed {
+          display: none;
+        }
   }
 
   @media screen and (max-width: 380px) {   

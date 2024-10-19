@@ -76,6 +76,53 @@ const skills = {
 
 const skillList = document.querySelector('dl.skill-list');
 const sortBtnsBlock = document.querySelector('.skills-button');
+const buttonCloseNav = document.querySelector('.button-nav.button_close-nav');
+const mainNav = document.querySelector('.main-nav');
+
+mainNav.classList.add('main-nav_closed'); // Добавляем класс для скрытия меню
+
+mainNav.addEventListener('click', () => {
+  console.log(mainNav);
+});
+buttonCloseNav.addEventListener('click', () => {
+  console.log(buttonCloseNav);
+});
+
+const menu = {
+  mainNav: document.querySelector('.main-nav'),
+  buttonCloseNav: document.querySelector('.button-nav.button_close-nav'),
+
+  open() {
+    menu.mainNav.classList.remove('main-nav_closed');
+    menu.buttonCloseNav.classList.remove('button_open-nav');
+    menu.buttonCloseNav.classList.add('button_close-nav');
+    menu.buttonCloseNav.innerHTML = '<span class="visually-hidden"> Закрыть меню</span>';
+  },
+
+  close() {
+    menu.mainNav.classList.add('main-nav_closed');
+    menu.buttonCloseNav.classList.remove('button_close-nav');
+    menu.buttonCloseNav.classList.add('button_open-nav');
+    menu.buttonCloseNav.innerHTML = '<span class="visually-hidden"> Открыть меню</span>';
+  },
+
+  toggle() {
+    if (menu.mainNav.classList.contains('main-nav_closed')) {
+      menu.open();
+    } else {
+      menu.close();
+    }
+  }
+};
+
+// Вызов закрытия меню при загрузке скрипта
+menu.close();
+
+// Добавление обработчика события на кнопку
+menu.buttonCloseNav.addEventListener('click', () => {
+  menu.toggle();
+});
+
 sortBtnsBlock.addEventListener('click', handleButtonClick);
 
 function handleButtonClick(event) {
