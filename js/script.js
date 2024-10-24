@@ -11,6 +11,7 @@ const skills = {
   sortMode: null,
 
   generateList(parentElement) {
+    parentElement.innerHTML = '';
     this.data.forEach(skill => {
       const skillItem = document.createElement('dt');
       skillItem.classList.add('skill-item');
@@ -30,31 +31,25 @@ const skills = {
   },
 
   sortList(type) {
-    if (this.sortMode === null || this.sortMode !== type) {
-      console.log(`отсортировали данные по ${type}`);
+    const comparers = {
+      name: (a, b) => a.name.localeCompare(b.name),
+      level: (a, b) => b.level - a.level
+    };
+  
+    const comparer = comparers[type];
+    this.data.sort(this.getComparer(comparer));
+    this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`] = !this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`];
+  
+    if (!this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`]) {
+      this.data.reverse();
+      console.log('Инвертировали порядок сортировки');
     } else {
-      console.log('инвертировали порядок сортировки');
+      console.log(`Отсортировали данные по ${type}`);
     }
-
-    if (type === 'name') {
-      this.data.sort(this.getComparer((a, b) => a.name < b.name ? -1 : 1));
-      this.sortByNameAsc = !this.sortByNameAsc;
-      if (!this.sortByNameAsc) {
-        this.data.reverse();
-      }
-    } else if (type === 'level') {
-      this.data.sort(this.getComparer((a, b) => a.level < b.level ? 1 : -1));
-      this.sortByLevelAsc = !this.sortByLevelAsc;
-      if (!this.sortByLevelAsc) {
-        this.data.reverse();
-      }
-    }
-
+  
     this.sortMode = type;
-    skillList.innerHTML = '';
-    this.generateList(skillList);
   },
-
+  
   getComparer(compareFunc) {
     return (a, b) => compareFunc(a, b);
   }
@@ -62,43 +57,41 @@ const skills = {
 
 const skillList = document.querySelector('dl.skill-list');
 const sortBtnsBlock = document.querySelector('.skills-button');
-const buttonCloseNav = document.querySelector('.button-nav.button_close-nav');
-const mainNav = document.querySelector('.main-nav');
-
-mainNav.classList.add('main-nav_closed');
-
 const menu = {
-  mainNav: document.querySelector('.main-nav'),
-  buttonCloseNav: document.querySelector('.button-nav.button_close-nav'),
+  nav: null,
+  btn: null,
+
+  init(navSelector, btnSelector) {
+    this.nav = document.querySelector(navSelector);
+    this.btn = document.querySelector(btnSelector);
+    this.close();
+    this.btn.addEventListener('click', this.toggle.bind(this));
+  },
 
   open() {
-    menu.mainNav.classList.remove('main-nav_closed');
-    menu.buttonCloseNav.classList.remove('button_open-nav');
-    menu.buttonCloseNav.classList.add('button_close-nav');
-    menu.buttonCloseNav.innerHTML = '<span class="visually-hidden"> Закрыть меню</span>';
+    this.nav.classList.remove('main-nav_closed');
+    this.btn.classList.remove('button_open-nav');
+    this.btn.classList.add('button_close-nav');
+    this.btn.innerHTML = '<span class="visually-hidden"> Закрыть меню</span>';
   },
 
   close() {
-    menu.mainNav.classList.add('main-nav_closed');
-    menu.buttonCloseNav.classList.remove('button_close-nav');
-    menu.buttonCloseNav.classList.add('button_open-nav');
-    menu.buttonCloseNav.innerHTML = '<span class="visually-hidden"> Открыть меню</span>';
+    this.nav.classList.add('main-nav_closed');
+    this.btn.classList.remove('button_close-nav');
+    this.btn.classList.add('button_open-nav');
+    this.btn.innerHTML = '<span class="visually-hidden"> Открыть меню</span>';
   },
 
   toggle() {
-    if (menu.mainNav.classList.contains('main-nav_closed')) {
-      menu.open();
+    if (this.nav.classList.contains('main-nav_closed')) {
+      this.open();
     } else {
-      menu.close();
+      this.close();
     }
   }
 };
 
-menu.close();
-menu.buttonCloseNav.addEventListener('click', () => {
-  menu.toggle();
-});
-
+menu.init('.main-nav', '.button-nav');
 sortBtnsBlock.addEventListener('click', handleButtonClick);
 
 function handleButtonClick(event) {
@@ -106,9 +99,11 @@ function handleButtonClick(event) {
     switch (event.target.dataset.type) {
       case 'name':
         skills.sortList('name');
+        skills.generateList(skillList);
         break;
       case 'level':
         skills.sortList('level');
+        skills.generateList(skillList);
         break;
       default:
         console.log('Неизвестная ошибка');

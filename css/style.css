@@ -122,6 +122,12 @@ button:hover {
     display: none;
   }
 
+  .button-nav:hover {
+    background-color: transparent;
+    color: var(--txt-color);
+    opacity: 1;
+}
+
 .social {
     display: flex;
     margin: 0 auto;
