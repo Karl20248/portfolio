@@ -6,8 +6,6 @@ const skills = {
     { name: 'c++', level: 70 }
   ],
 
-  sortByNameAsc: false,
-  sortByLevelAsc: false,
   sortMode: null,
 
   generateList(parentElement) {
@@ -31,27 +29,29 @@ const skills = {
   },
 
   sortList(type) {
-    const comparers = {
-      name: (a, b) => a.name.localeCompare(b.name),
-      level: (a, b) => b.level - a.level
-    };
-  
-    const comparer = comparers[type];
-    this.data.sort(this.getComparer(comparer));
-    this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`] = !this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`];
-  
-    if (!this[`sortBy${type.charAt(0).toUpperCase() + type.slice(1)}Asc`]) {
-      this.data.reverse();
-      console.log('Инвертировали порядок сортировки');
-    } else {
+    
+    if(this.sortMode!=type) {
+      this.data.sort(this.getComparer(type));
       console.log(`Отсортировали данные по ${type}`);
     }
+    else{
+        this.data.reverse();
+        console.log(`Инвертировали порядок сортировки`);
+    } 
   
     this.sortMode = type;
   },
   
-  getComparer(compareFunc) {
-    return (a, b) => compareFunc(a, b);
+  getComparer(prop) {
+    return function(a, b) {
+      if (a[prop] < b[prop]) {
+          return -1;
+      }
+      if (a[prop] > b[prop]) {
+          return 1;
+      }
+      return 0; 
+    }
   }
 };
 
