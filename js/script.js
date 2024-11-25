@@ -88,6 +88,37 @@ const menu = {
     }
   }
 };
+const checkbox = document.querySelector('input[type="checkbox"]');
+const body = document.body;
+
+function saveTheme(theme) {
+  localStorage.setItem('theme', theme);
+}
+
+function loadTheme() {
+  return localStorage.getItem('theme');
+}
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    body.classList.remove('dark-theme');
+    saveTheme('light');
+  } else {
+    body.classList.add('dark-theme');
+    saveTheme('dark');
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = loadTheme();
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+    checkbox.checked = false;
+  } else {
+    body.classList.remove('dark-theme');
+    checkbox.checked = true;
+  }
+});
 
 menu.init('.main-nav', '.button-nav');
 sortBtnsBlock.addEventListener('click', handleButtonClick);
