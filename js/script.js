@@ -29,29 +29,27 @@ const skills = {
   },
 
   sortList(type) {
-    
-    if(this.sortMode!=type) {
+    if (this.sortMode !== type) {
       this.data.sort(this.getComparer(type));
       console.log(`Отсортировали данные по ${type}`);
+    } else {
+      this.data.reverse();
+      console.log(`Инвертировали порядок сортировки`);
     }
-    else{
-        this.data.reverse();
-        console.log(`Инвертировали порядок сортировки`);
-    } 
-  
+
     this.sortMode = type;
   },
-  
+
   getComparer(prop) {
     return function(a, b) {
       if (a[prop] < b[prop]) {
-          return -1;
+        return -1;
       }
       if (a[prop] > b[prop]) {
-          return 1;
+        return 1;
       }
-      return 0; 
-    }
+      return 0;
+    };
   }
 };
 
@@ -96,18 +94,8 @@ sortBtnsBlock.addEventListener('click', handleButtonClick);
 
 function handleButtonClick(event) {
   if (event.target.nodeName === 'BUTTON') {
-    switch (event.target.dataset.type) {
-      case 'name':
-        skills.sortList('name');
-        skills.generateList(skillList);
-        break;
-      case 'level':
-        skills.sortList('level');
-        skills.generateList(skillList);
-        break;
-      default:
-        console.log('Неизвестная ошибка');
-    }
+    skills.sortList(event.target.dataset.type);
+    skills.generateList(skillList);
   }
 }
 
