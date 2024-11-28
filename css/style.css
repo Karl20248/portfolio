@@ -34,6 +34,10 @@ footer {
     background-color: var(--txt-color);
 }
 
+.dark-theme footer{
+  background-color: #09A494;
+}
+
 h1 {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 60px;
