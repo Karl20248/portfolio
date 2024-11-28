@@ -24,6 +24,9 @@ body {
   --txt-color: #CCCCCC;
   --bg-color: #031923;
 }
+.dark-theme .social-link{
+    background-color: #CCCCCC;
+    }
 
 footer {
     color: var(--bg-color);
