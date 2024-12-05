@@ -1,0 +1,20 @@
+{
+    "data": [
+      {
+        "name": "html",
+        "level": 80
+      },
+      {
+        "name": "css",
+        "level": 80
+      },
+      {
+        "name": "python",
+        "level": 60
+      },
+      {
+        "name": "c++",
+        "level": 70
+      }
+    ]
+  }
