@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Юдин Кирилл Игоревич</title>
+    <meta name="description" content="Моё портфолио с информацией об образовании, интересах и навыках">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nomalise.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo"><a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
+                <button class="button-nav button_close-nav">
+                    <span class="visually-hidden"> Закрыть меню</span>
+                  </button></div>
+            <nav class="main-nav main-nav_closed" >
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#interests">Интересы</a>
+                    <a href="#contacts">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="intro" class="intro">
+                    <div class="name"><h1>Кирилл Юдин</h1>
+                    <p class="subtitle">Программист и системный администратор</p></div>
+                    <img class="user-photo" src="img/Photo.jpg" width="400" height="400" alt="Моё фото">
+            </section>
+
+            <section id="about" class="about">
+                <div class="text-wrapper"><h2>Пара слов обо мне</h2>
+                <p>Привет ✌️ </p>
+                <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
+                по направлению «Информатика и вычисли­тельная техника».</p>
+                <p>В прошлом году защитил диплом бакалавра на тему «Разработка программного модуля для 3D-отображения области падения отделяющихся частей ракеты». Работа была высоко оценена комиссией.</p>
+                <p>В настоящее время работаю на должности инженера в Центре управления полетами.</p></div>
+            </section>
+
+            <section id="skills" class="skills">
+                <div class="skills-header">
+                    <h2>Мои навыки</h2>
+                    <div class="skills-button">
+                        <p>Сортировать</p>
+                        <button data-type="name">по названию</button>
+                        <button data-type="level">по уровню</button>
+                    </div>
+                </div>
+                <dl class="skill-list">
+                </dl>
+            </section>
+            
+            <section id="interests" class="interests">
+                <h2>Мои интересы</h2>
+                <div class="text-wrapper"><p>Наибольший интерес для меня в данный момент представляет программирование на языках высокого уровня и работа с железом (в т.ч. сборка ПК).</p>
+                <p>Помимо учёбы и работы я также люблю активный отдых, просмотр кино и чтение зарубежной литературы.</p></div>
+            </section>
+
+            <section id="contacts" class="contacts">
+                <h2>Мои контакты</h2>
+                <ul class="contact">
+                    <li><a class="contact-link contact-link_phone" href="tel:+79151654788">+7 915 165-47-88</a></li>
+                    <li><a class="contact-link contact-link_mail" href="mailto:kyudin2001@mail.ru">kyudin2001@mail.ru</a></li>
+                </ul>
+                
+                <ul class="social">
+                    <li><a class="social-link social-link_github" href="https://github.com"><span class="social-text visually-hidden">GitHub</span></a></li>
+                    <li><a class="social-link social-link_gitlab" href="https://gitlab.com"><span class="social-text visually-hidden">Gitlab</span></a></li>
+                    <li><a class="social-link social-link_instagram" href="https://instagram.com"><span class="social-text visually-hidden">Instagram</span></a></li>
+                    <li><a class="social-link social-link_telegram" href="https://telegram.org"><span class="social-text visually-hidden">Telegram</span></a></li>
+                    <li><a class="social-link social-link_vk" href="https://vk.com"><span class="social-text visually-hidden">Вконтакте</span></a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+        <p>© 2024 Кирилл Юдин</p>
+        </div>
+    </footer>
+
+    <label class="switch">
+        <input class="switch-checkbox" type="checkbox">
+        <span class="switch-slider"></span>
+    </label>
+</body>
+</html>
