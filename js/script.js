@@ -9,16 +9,13 @@ const skills = {
       this.data = data.data;
       this.generateList(skillList);
     } catch (error) {
+      document.querySelector(".skills").style.display='none'
       console.error('что-то пошло не так', error);
     }
   },
 
   generateList(parentElement) {
     parentElement.innerHTML = '';
-    if (this.data.length === 0) {
-      SectionSkills.style.display = 'none';
-    } else {
-      SectionSkills.style.display = 'block';
     this.data.forEach(skill => {
       const skillItem = document.createElement('dt');
       skillItem.classList.add('skill-item');
@@ -35,7 +32,6 @@ const skills = {
       skillLevel.append(skillBar);
       parentElement.append(skillItem, skillLevel);
       });
-    }
   },
 
   sortList(type) {
@@ -64,7 +60,6 @@ const skills = {
   }
 };
 
-const SectionSkills = document.querySelector('section.skills');
 const skillList = document.querySelector('dl.skill-list');
 const sortBtnsBlock = document.querySelector('.skills-button');
 
